@@ -1,6 +1,6 @@
-import * as mqtt from 'mqtt'
-import fs from 'fs'
 import path from 'path'
+import fs from 'fs'
+import * as mqtt from 'mqtt'
 
 const ROOT_PATH = process.cwd()
 
@@ -13,7 +13,7 @@ const cert = fs.readFileSync(certPath)
 const key = fs.readFileSync(keyPath)
 
 const options = {
-  rejectUnauthorized: true,
+  // rejectUnauthorized: true,
   ca,
   cert,
   key
